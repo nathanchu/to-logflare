@@ -1,0 +1,19 @@
+{
+  "name": "to-logflare",
+  "version": "0.1.0",
+  "description": "Unoffcial package to send logs to logflare (logflare.app)",
+  "homepage": "https://github.com/nathanchu/to-logflare",
+  "author": "Nathan Chu",
+  "bugs": "https://github.com/nathanchu/to-logflare/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanchu/to-logflare.git"
+  },
+  "main": "./src/index.js",
+  "license": "MIT",
+  "bin": "./src/cli.js",
+  "dependencies": {
+    "arg": "^5.0.0",
+    "axios": "^0.21.1"
+  }
+}
