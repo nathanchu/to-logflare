@@ -2,6 +2,9 @@
 const toLogflare = require("./index");
 const readline = require("readline");
 const arg = require("arg");
+const fastq = require("fastq");
+
+const queue = fastq.promise(toLogflare, 1)
 
 const args = arg({
   "--source": String,
@@ -28,9 +31,9 @@ const rl = readline.createInterface({
 
 rl.on("line", (message) => {
   console.log(message);
-  toLogflare({ message, source, apiKey })
-    .then(noop)
-    .catch((err) => {
-      console.error(err);
-    });
+
+  if (!/^\s*$/.test(message)) {
+    queue.push({ message, source, apiKey })
+      .catch(() => {console.error('TO-LOGFLARE ERROR! REPORT AT https://github.com/nathanchu/to-logflare/issues!')});
+  }
 });
