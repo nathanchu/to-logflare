@@ -1,7 +1,7 @@
 {
   "name": "to-logflare",
   "version": "0.1.0",
-  "description": "Unoffcial package to send logs to logflare (logflare.app)",
+  "description": "An unoffcial npm package to send logs to logflare (logflare.app)",
   "homepage": "https://github.com/nathanchu/to-logflare",
   "author": "Nathan Chu",
   "bugs": "https://github.com/nathanchu/to-logflare/issues",
